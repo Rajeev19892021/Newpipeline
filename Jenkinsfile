@@ -23,7 +23,7 @@ pipeline
          stage("Contdeploy")
         {
             steps{
-                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '691900bb-07d4-4fd7-9f38-1a67ca515a16', path: '', url: 'http://172.31.15.51:8080')], contextPath: 'test', war: '**/*.war'
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '691900bb-07d4-4fd7-9f38-1a67ca515a16', path: '', url: 'http://172.31.15.51:8080')], contextPath: 'test22', war: '**/*.war'
             }
         }
 
