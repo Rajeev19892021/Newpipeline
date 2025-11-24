@@ -23,6 +23,7 @@ pipeline
          stage("Contdeploy")
         {
             steps{
+
                 deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '71633af5-521e-4323-87ac-bf5e22fe61d8', path: '', url: 'http://172.31.44.96:8080')], contextPath: 'test', war: '**/*.war'
             }
         }
@@ -38,6 +39,7 @@ pipeline
          stage("Cont_delivery")
         {
             steps{
+                input message: 'Waiting for approval from user Monica', submitter: 'Monica'
                 deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '8ff8ef25-2e6e-4541-a7da-e11bf594b7b4', path: '', url: 'http://172.31.35.208:8080')], contextPath: 'test', war: '**/*.war'
             }
             
