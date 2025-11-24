@@ -28,5 +28,11 @@ pipeline
         }
     }
 
-
+post
+{
+    failure
+    {
+        mail bcc: '', body: 'project failed ', cc: '', from: '', replyTo: '', subject: 'project failed ', to: 'rajeevbhargava89@gmail.com'
+    }
+}
 }
